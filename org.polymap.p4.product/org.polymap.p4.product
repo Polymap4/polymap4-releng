@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="P4" uid="org.polymap.p4.product" application="org.polymap.p4.app" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="false">
+<product name="P4" uid="org.polymap.p4.product" id="org.polymap.p4.product" application="org.polymap.p4.app" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="false">
+
 
    <configIni use="">
    </configIni>
@@ -11,6 +12,7 @@
 
    <windowImages/>
 
+
    <launcher>
       <solaris/>
       <win useIco="false">
@@ -18,8 +20,10 @@
       </win>
    </launcher>
 
+
    <vm>
    </vm>
+
 
    <plugins>
       <plugin id="com.ibm.icu.base"/>
