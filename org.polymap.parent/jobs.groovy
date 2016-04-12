@@ -307,11 +307,11 @@ repoProjects.each {
 					}
 				}
 			}
-			/*if(successor != null) {
+			if(successor != null) {
 				def successorProject = repoProjects.find { it.name == successor }
 				def successorJobName = successorProject.repository.replace('polymap4-', '') + '_' + successorProject.name + '_' + successorProject.branch
 				downstream(successorJobName, 'UNSTABLE')
-			}*/
+			}
 			if (archiveProduct) {
 				archiveArtifacts {
 					pattern('**/products/*.zip')
