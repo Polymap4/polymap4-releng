@@ -189,7 +189,8 @@ def repoProjectsStr = '''[
    { "name": "org.eclipse.rap.rwt.de",
       "repository" : "polymap4-rhei",
       "branch": "develop-rap2.3",
-      "folder": "plugins" 
+      "folder": "plugins",
+      "ant": "false"
    },
    { "name": "org.polymap.p4",
       "repository" : "polymap4-p4",
