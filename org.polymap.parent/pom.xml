@@ -216,7 +216,7 @@
 		<repository>
 			<id>polymap4_target</id>
 			<layout>p2</layout>
-			<url>${polymap4_target}</url>
+			<url>${env.polymap4_target}</url>
 		</repository>
 	</repositories>
 </project>
