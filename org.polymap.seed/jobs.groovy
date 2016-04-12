@@ -216,7 +216,7 @@ repoProjects.each {
    def projectName = it.name
    def branchName = it.branch
    def folder = (it.folder != null) ? it.folder + '/' : ''
-   def jobName = 'm_' + it.repository.replace('polymap4-', '') + '_' + it.name + '_' + it.branch
+   def jobName = it.repository.replace('polymap4-', '') + '_' + it.name + '_' + it.branch
    def repoName = it.repository
    def useAnt = (it.ant != null && it.ant == 'false') ? false : true
    def useSass = (it.sass != null && it.sass == 'true') ? true : false
