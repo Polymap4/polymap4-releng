@@ -232,6 +232,7 @@ repoProjects.each {
 
    mavenJob(jobName) {
      logRotator(-1, 5)
+     quitPeriod(60)
      blockOnUpstreamProjects()
 	   properties {
 	      githubProjectUrl('git@github.com:Polymap4/' + repoName + '.git')
@@ -252,7 +253,6 @@ repoProjects.each {
 		      }
              extensions {
                cleanBeforeCheckout()
-               //wipeOutWorkspace()
              }  
 		   }
 		}
@@ -322,5 +322,11 @@ repoProjects.each {
 				notifyBackToNormal()
 	      }
 		}
+		configure { project -> 
+		  project / 'scm' / 'extensions' / 'hudson.plugins.git.extensions.impl.PathRestriction' {
+            'includedRegions'( folder + projectName + '/.*')
+            'excludedRegions'()
+          }
+        }  
 	}
 }
