@@ -232,6 +232,7 @@ repoProjects.each {
 
    mavenJob(jobName) {
      logRotator(-1, 5)
+     quietPeriod(3)
      blockOnUpstreamProjects()
 	   properties {
 	      githubProjectUrl('git@github.com:Polymap4/' + repoName + '.git')
