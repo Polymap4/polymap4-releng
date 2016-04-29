@@ -93,6 +93,12 @@ def repoProjectsStr = '''[
       "folder" : "plugins",
       "successor": "org.polymap.core.data.rs"
    },
+   { "name": "org.polymap.core.style",
+      "repository" : "polymap4-core",
+      "branch": "develop-rap2.3",
+      "folder" : "plugins",
+      "successor": "org.polymap.p4"
+   },
    { "name": "org.polymap.core.data.wms",
       "repository" : "polymap4-core",
       "branch": "develop-rap2.3",
