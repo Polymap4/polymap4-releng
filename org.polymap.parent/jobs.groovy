@@ -219,7 +219,8 @@ def repoProjectsStr = '''[
       "repository" : "polymap4-releng",
       "branch": "master",
       "ant": "false",
-      "archiveProduct": "true"
+      "archiveProduct": "true",
+      "successor": "mapzone_io.mapzone.arena_master"
    }
 ]'''
 
@@ -322,8 +323,12 @@ repoProjects.each {
 			}
 			if(successor != null) {
 				def successorProject = repoProjects.find { it.name == successor }
-				def successorJobName = successorProject.repository.replace('polymap4-', '') + '_' + successorProject.name + '_' + successorProject.branch
-				downstream(successorJobName, 'UNSTABLE')
+				if (successorProject != null) {
+				  def successorJobName = successorProject.repository.replace('polymap4-', '') + '_' + successorProject.name + '_' + successorProject.branch
+				  downstream(successorJobName, 'UNSTABLE')
+				} else {
+				  downstream(successor, 'UNSTABLE')
+				}  
 			}
 			if (archiveProduct) {
 				archiveArtifacts {
