@@ -203,11 +203,13 @@ def repoProjectsStr = '''[
    { "name": "org.polymap.p4",
       "repository" : "polymap4-p4",
       "branch": "master",
+      "junit": "true",
       "successor": "org.polymap.p4.data.importer"
    },
    { "name": "org.polymap.p4.data.importer",
       "repository" : "polymap4-p4",
       "branch": "master",
+      "junit": "true",
       "successor": "org.polymap.p4.product"
    },
    { "name": "org.polymap.cms",
